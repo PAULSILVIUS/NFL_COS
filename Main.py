@@ -13,16 +13,28 @@ print(gameset[2][0])
 
 list = Data(gameset)
 
+
 result_list = list.get_team_wins('BAL')
 #used_team_list = list.get_team_wins('MIA')
 all_teams = list.get_all_teams()
+oneTeam = all_teams[0]
 
-team1 = Team('BAL', result_list)
+for x in all_teams:
+    oneTeam = x
+    result_list =  list.get_team_wins(oneTeam)
+    Team(oneTeam, result_list)
+    Team.print_data(oneTeam, result_list)
+    
+
+
+
+
+
 
 
 #circle_list = TeamList()
 #circle_list.save_team(result_list)
-print(all_teams)
-print(result_list)
-Team.print_data('BAL',result_list)
+#print(all_teams)
+#print(result_list)
+
 #circle_list.print_teams()

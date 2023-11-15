@@ -6,7 +6,7 @@ class Data:
         result = []
         for item in self.array:
             result.append(item[0])
-        result = set(result)
+        result = list(set(result))    
         return result
     
     # returns a list of teams that the specified team defeated
