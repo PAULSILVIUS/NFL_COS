@@ -27,7 +27,8 @@ for x in all_teams:
     team_object = Team(x, result_list)
     circle_list.append(team_object)
     Team.print_data(x, result_list)
-    Team.circle(circle_list)
+    tname = Team.print_data(x, result_list)
+    Team.circle(x,result_list,circle_list)
 
     
     
