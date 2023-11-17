@@ -1,4 +1,4 @@
-class Data:
+class data:
     def __init__(self, array):
         self.array = array
         
