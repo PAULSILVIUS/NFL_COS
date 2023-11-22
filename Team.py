@@ -20,13 +20,21 @@ class Team:
         print("Team Name:", name)
         print("Defeated Teams:", defeated_teams)
     
-    def compare(team1, team2):
-        for defeated_team in team1.defeated_teams:
-            if defeated_team == team2.name:
+    def compare(self, other):
+        for team in self.defeated_teams:
+            if team == other.name:
+                print('True')
                 return True
+        self.swap(other)
+       # print('False')
         return False
-            
 
+    def swap(self, other):
+        self.name, other.name = other.name, self.name
+        self.defeated_teams, other.defeated_teams = other.defeated_teams, self.defeated_teams
+
+
+    
         
     
 
